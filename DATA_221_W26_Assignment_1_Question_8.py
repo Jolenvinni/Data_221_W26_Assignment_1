@@ -16,9 +16,11 @@ data = {
 "C": [800, 150, 400, 210],
 }
 
-
+#Creates dataframe.
 generic_data_frame = pd.DataFrame(data)
 
+#Creates a new column from the quotient of (column B / column A).
 generic_data_frame["D"] = generic_data_frame['B'] / generic_data_frame['A']
 
+#Output.
 print(generic_data_frame)

@@ -15,14 +15,20 @@ def parity_list_of_strings(list_of_strings):
 
     dictionary_of_the_strings = {}
 
+    #Goes through and takes the words from the list.
     for string in list_of_strings:
 
         dictionary_of_the_strings[string] = {
+
+            #Counts the word length.
             "length": len(string),
+
+            #Checks if the length is even or odd.
             "parity": "even" if len(string) % 2 == 0 else "odd"
         }
 
     return dictionary_of_the_strings
 
+#Output.
 print(parity_list_of_strings(["data","science"]))
 

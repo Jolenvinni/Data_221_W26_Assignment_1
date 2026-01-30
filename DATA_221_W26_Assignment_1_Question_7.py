@@ -16,19 +16,23 @@ def convert_seconds_to_clock_time(seconds):
     minutes = seconds // 60
     hours = minutes // 60
 
+    #Prevents illogical output.
     if seconds < 0:
         return "Cannot convert negative seconds."
 
     elif seconds > 86400:
         return "Cannot convert more than 24 hours (86400 seconds)."
 
+    #Outputs time before noon.
     elif seconds <= 43200:
         return f"{hours} {minutes % 60:02d} {seconds % 60:02d} AM"
 
+    #Outputs time after noon.
     elif seconds > 43200:
         hours -= 12
         return f"{hours} {minutes % 60:02d} {seconds % 60:02d} PM"
 
+#All possible output messages.
 print(convert_seconds_to_clock_time(-1))
 print(convert_seconds_to_clock_time(0))
 print(convert_seconds_to_clock_time(387))

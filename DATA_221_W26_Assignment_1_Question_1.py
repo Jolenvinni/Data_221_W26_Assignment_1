@@ -15,12 +15,13 @@ threshold = 100
 product = 1
 currentNumber = 1
 
+#Factorial that exceeds the threshold.
 while product <= threshold:
 
     currentNumber += 1
     product *= currentNumber
 
-
+#Output.
 print(f"Final product: {product}, Current multiplier: {currentNumber}")
 
 
